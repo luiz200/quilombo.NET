@@ -19,3 +19,12 @@ Route::get('/', function () {
 Route::get('/contact', function () {
     return view('contact');
 });
+Route::get('/profile', function () {
+    return view('profile');
+});
+Route::get('/login', function () {
+    return view('login');
+});
+Route::get('/newuser', function () {
+    return view('newuser');
+});
