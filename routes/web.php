@@ -13,18 +13,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('index');
-});
-Route::get('/contact', function () {
-    return view('contact');
-});
-Route::get('/profile', function () {
-    return view('profile');
-});
-Route::get('/login', function () {
-    return view('login');
-});
-Route::get('/newuser', function () {
-    return view('newuser');
-});
+use App\Http\Controllers\QuilombController;
+
+Route::get('/', [QuilombController::class, 'index']);
+Route::get('/users/contact', [QuilombController::class, 'contact']);
+Route::get('/users/profile', [QuilombController::class, 'profile']);
+Route::get('/users/login', [QuilombController::class, 'login']);
+Route::get('/users/newuser', [QuilombController::class, 'newuser']);
