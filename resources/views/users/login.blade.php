@@ -3,6 +3,29 @@
 @section('title', 'Login')
 
 @section('content')
+<style>
+    form{
+    text-align: center;
+    height: 100px;
+    
+    
+
+}
+
+legend{
+    text-align: center;
+}
+fieldset{
+    text-align: center;
+    background-color: salmon;
+    position: absolute;
+    left:550px;
+    margin-top:2px;
+    width:225px;
+    height:170px;
+    border: darksalmon;
+}
+    </style>
 <fieldset>
         <legend>Acesso Restrito</legend>
         <form name="caixalogin">
