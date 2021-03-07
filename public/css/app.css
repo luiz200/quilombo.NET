@@ -11,3 +11,17 @@
 #navbarSite{
     padding-left: 555px;
 }
+form{
+    text-align: center;
+    height: 100px;
+}
+legend{
+    text-align: center;
+}
+.box{
+    text-align: center;
+    padding-top: 101px;
+    padding-left: 120px;
+    background-color: salmon;
+    border: darksalmon;
+}
