@@ -3,7 +3,8 @@
 @section('title', 'Login')
 
 @section('content')
-
+<fieldset>
+        <legend>Acesso Restrito</legend>
     <div class="container" id="main-container">
         <h1>Login</h1>
         <form id="registro-form">
@@ -20,5 +21,5 @@
                 </div>
         </form>
     </div>
-
+</fieldset>
 @endsection
