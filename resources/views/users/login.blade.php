@@ -5,7 +5,8 @@
 @section('content')
 <fieldset>
         <legend>Acesso Restrito</legend>
-    <div class="container" id="main-container">
+        <form name="caixalogin">
+        <div class="container" id="main-container">
         <h1>Login</h1>
         <form id="registro-form">
             <div class="half-box spacing">
@@ -21,5 +22,6 @@
                 </div>
         </form>
     </div>
+</form>
 </fieldset>
 @endsection
