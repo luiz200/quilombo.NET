@@ -19,7 +19,7 @@ fieldset{
     text-align: center;
     background-color: salmon;
     position: absolute;
-    left:550px;
+    left:6000px;
     margin-top:2px;
     width:225px;
     height:170px;
