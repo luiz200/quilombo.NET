@@ -21,4 +21,7 @@ class QuilombController extends Controller
     public function newuser(){
         return view('users.newuser');
     }
+    public function comment(){
+        return view('users.comment');
+    }
 }

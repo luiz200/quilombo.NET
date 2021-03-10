@@ -36,6 +36,9 @@
                                 <a class="nav-link" href="/users/newuser">Cadastrar Quilombo</a>
                             </li>
                             <li class="nav-item">
+                                <a class="nav-link" href="/users/comment">Cadastrar Publicações</a>
+                            </li>
+                            <li class="nav-item">
                                 <a class="nav-link" href="/users/login">Entrar</a>
                             </li>
                         </ul>    

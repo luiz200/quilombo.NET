@@ -20,3 +20,4 @@ Route::get('/users/contact', [QuilombController::class, 'contact']);
 Route::get('/users/profile', [QuilombController::class, 'profile']);
 Route::get('/users/login', [QuilombController::class, 'login']);
 Route::get('/users/newuser', [QuilombController::class, 'newuser']);
+Route::get('/users/comment', [QuilombController::class, 'comment']);
