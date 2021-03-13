@@ -4,6 +4,9 @@
 
 @section('content')
 
-<h1>Página Inicial!!</h1>
+@foreach($publictions as $publiction)
+    <p>{{ $publiction->title }}</p>
+    <p>{{ $publiction->title }}</p>
+@endforeach
 
 @endsection

@@ -4,10 +4,15 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+use App\Models\publiction;
+
 class QuilombController extends Controller
 {
     public function index(){
-        return view('index');
+        
+        $publictions = Publiction::all(); 
+
+        return view('index',['publictions'=>$publictions]);
     }
     public function contact(){
         return view('users.contact');
@@ -23,5 +28,20 @@ class QuilombController extends Controller
     }
     public function comment(){
         return view('users.comment');
+    }
+    public function publiction(){
+        return view('users.publiction');
+    }
+    public function store(Request $request){
+
+        $publiction = new publiction;
+
+        $publiction->title = $request->title;
+        $publiction->content = $request->content;
+
+        $publiction->save();
+
+        return redirect('/');
+
     }
 }
