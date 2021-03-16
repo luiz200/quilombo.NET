@@ -4,15 +4,15 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-use App\Models\publiction;
+use App\Models\Publiction;
 
 class QuilombController extends Controller
 {
     public function index(){
         
-        $publictions = Publiction::all(); 
+        $quilombo = Publiction::all(); 
 
-        return view('index',['publictions'=>$publictions]);
+        return view('index',['publictions'=>$quilombo]);
     }
     public function contact(){
         return view('users.contact');

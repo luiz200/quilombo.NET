@@ -8,10 +8,12 @@
  <form action="/users" method="POST">
    @csrf
     <label for="title">Titúlo: </label>
-    <input type="text" id="title" name="title">   
+    <input type="text" id="title" name="title"> 
+    <br>  
     <label for="content">Conteúdo: </label>
     <input type="text" id="content" name="content">
-    <input type="button" name="ok">
+    <br>
+    <button>OK</button>
 
  </form>
  
