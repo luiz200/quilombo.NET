@@ -15,7 +15,7 @@
 <header>
         <div>
             <nav class="navbar navbar-expand-lg border-bottom border-dark    navbar-dark sticky-top" id="nav">
-                <div class="container">
+                <div class="container-lg">
                     <a class="navbar-brand h1 mb-0" href="/">Quilombo.NET</a>
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSite">
                         <span class="navbar-toggler-icon"></span>
@@ -49,6 +49,5 @@
     <body id="back">
         @yield('content')
     </body>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
     <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
 </html>

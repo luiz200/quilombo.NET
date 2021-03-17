@@ -6,35 +6,35 @@
 
 @foreach($publictions as $quilombo)
 <br>
-<div class="container">
-    <table border="1">
+<div class="container-lg">
+    <table class="table">
         <thead>
             <tr>
-                <th>
+                <th scope="col">
                     Quilombo Cachangar
                 </th>
             </tr>
         </thead>
         <tbody>
             <tr>
-                <td>
+                <td scope="col">
                     <h4>
                     {{ $quilombo->title }}
                     </h4>
                 </td>
             </tr>
             <tr>
-                <td>
+                <td scope="col">
                     <p>{{ $quilombo->content }}</p>
                 </td>
             </tr>
         </tbody>
         <tfoot>
             <tr>
-                <td>
+                <td scope="col">
                     <form action="" method="POST">
                         <input type="text">
-                        <button>OK</button>
+                        <button type="submit" class="btn bt">OK</button>
                     </form>
                 </td>
             </tr>
