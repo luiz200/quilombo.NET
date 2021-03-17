@@ -46,7 +46,7 @@
 </header>
 <div class="container-fluid">
     <div class="row">
-        <nav id="sidebarMenu" class="col-md-5 col-lg-2 d-md-block bg-light sidebar collapse row" style>
+        <nav id="sidebarMenu" class="col-md-5 col-lg-2 d-md-block bg-light bg-gradient sidebar collapse row" style>
             <div class="position-sticky pt-4">
                 <ul class="nav flex-column">
                     <li class="nav-item">
