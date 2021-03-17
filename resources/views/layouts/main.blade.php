@@ -11,43 +11,80 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto" rel="stylesheet">
 
     <title>@yield('title')</title>
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+    </style>
+    <style type="text/css">
+    /* Chart.js */
+    @keyframes chartjs-render-animation{from{opacity:.99}to{opacity:1}}.chartjs-render-monitor{animation:chartjs-render-animation 1ms}.chartjs-size-monitor,.chartjs-size-monitor-expand,.chartjs-size-monitor-shrink{position:absolute;direction:ltr;left:0;top:0;right:0;bottom:0;overflow:hidden;pointer-events:none;visibility:hidden;z-index:-1}.chartjs-size-monitor-expand>div{position:absolute;width:1000000px;height:1000000px;left:0;top:0}.chartjs-size-monitor-shrink>div{position:absolute;width:200%;height:200%;left:0;top:0}
+    </style>
+    
 </head>
-<header>
-        <div>
-            <nav class="navbar navbar-expand-lg border-bottom border-dark    navbar-dark sticky-top" id="nav">
-                <div class="container-lg">
-                    <a class="navbar-brand h1 mb-0" href="/">Quilombo.NET</a>
-                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSite">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div class="collapse navbar-collapse" id="navbarSite">
-                        <ul class="navbar-nav mr-auto">
-                            <li class="nav-item">
-                                <a class="nav-link" href="/">Home</a>
-                            </li>
-                            
-                            <li class="nav-item">
-                                <a class="nav-link" href="/users/profile">Perfil</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="/users/contact">Contatos</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="/users/newuser">Cadastrar Quilombo</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="/users/publiction">Cadastrar Publicações</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="/users/login">Entrar</a>
-                            </li>
-                        </ul>    
-                    </div>
-                </div>
-            </nav> 
-    </header>
-    <body id="back">
+<header class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0 shadow" id="nav">
+    <a class="navbar-brand col-md-3 col-lg-2 me-0 px-3" href="/">Quilombo</a>
+    <button class="navbar-toggler position-absolute d-md-none" type="button" data-bs-toggle="collapse" data-bs-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="true" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <input class="form-control form-control-dark w-100" type="text" placeholder="Search" aria-label="Search">
+    <ul class="navbar-nav px-3">
+        <li class="nav-item text-nowrap">
+            <a class="nav-link" href="/users/login">Entrar</a>
+        </li>
+    </ul>
+</header>
+<div class="container-fluid">
+    <div class="row">
+        <nav id="sidebarMenu" class="col-md-5 col-lg-2 d-md-block bg-light sidebar collapse row" style>
+            <div class="position-sticky pt-4">
+                <ul class="nav flex-column">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="/">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/users/profile">Perfil</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/users/contact">Contatos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/users/newuser">Cadastrar Quilombo</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/users/publiction">Publicar</a>
+                    </li>
+                </ul>    
+            </div>
+        </nav>
+    </div>
+</div>
+<main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
+    <div class="chartjs-size-monitor">
+        <div class="chartjs-size-monitor-expand">
+            <div class>
+            </div>
+        </div>
+        <div class="chart-size-monitor-shrink">
+            <div class>
+            </div>
+        </div>
+    </div>
+</main>
+<body>
+    <div class="container" id="back">
         @yield('content')
-    </body>
-    <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+    </div>
+</body>
+<script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
 </html>

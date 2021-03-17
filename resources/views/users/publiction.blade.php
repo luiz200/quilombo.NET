@@ -3,18 +3,24 @@
 @section('title', 'Publicações')
 
 @section('content')
-
- <h1>Publicações</h1>
- <form action="/users" method="POST">
+<div id="d"></div>
+<form class="border container" action="/users" method="POST">
+<br>
+<legend>Publicações</legend>
    @csrf
-    <label for="title">Titúlo: </label>
-    <input type="text" id="title" name="title"> 
-    <br>  
-    <label for="content">Conteúdo: </label>
-    <input type="text" id="content" name="content">
+   <br>
+   <div class="mb-3">
+     <label class="form-label" for="title">Titúlo</label>
+     <input class="form-control" type="text" id="title" name="title"> 
+   </div>
+   <div class="mb-3">
+     <label class="form-label" for="content">Conteúdo</label>
+     <input class="form-control" type="text" id="content" name="content">
+   </div> 
+   <br> 
+    <button class="btn btn-primary">OK</button>
     <br>
-    <button>OK</button>
-
+    <br>
  </form>
  
-@endsection
+@endsection 
