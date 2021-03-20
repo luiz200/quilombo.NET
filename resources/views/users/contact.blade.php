@@ -3,7 +3,17 @@
 @section('title', 'Contatos')
 
 @section('content')
-
+<style>
+body {
+    background-image: url(/img/fundo.png); 
+    background-position: center;
+    background-attachment: fixed;
+    background-size:1500px;
+    background-size: 1100px;
+    background-repeat: no-repeat;
+}
+</style>
+<body>
 <h1>Contatos</h1>
 <h5> Comunidades:</h5>
 <h7> Comunidade Quilombola Nova Descoberta: (84) 99999-9999</h7<br><br><br>
@@ -19,12 +29,12 @@
 
 <form method="post" action="ramonmartinsmr@gmail.com">
 
-	<textarea rows="5" cols="20" wrap="physical" name="comments">Deixe aqui se feedback ou dúvidas</textarea><br />
+	<textarea rows="5" cols="20" wrap="physical" name="comments" style="background-color:transparent">Deixe aqui se feedback ou dúvidas</textarea><br />
 	<input type="submit" value="Enviar" />
 	
 </form>
 
 
 <a href="/">Home</a>
-
+</body>
 @endsection
