@@ -38,6 +38,18 @@
                         <a href="/users/comment">Comentar</a>
                     </td>
                 </tr>
+                @foreach($comments as $comment)
+                <tr scope="col">
+                    <td>
+                        <p>{{ $quilombo->email }}</p>
+                    </td>
+                </tr>
+                <tr scope="col">
+                    <td>
+                        <p>{{ $quilombo->content2 }}</p>
+                    </td>
+                </tr>
+                @endforeach
             </tfoot>
         </table>
     @endforeach

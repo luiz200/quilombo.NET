@@ -14,7 +14,7 @@ class QuilombController extends Controller
         $quilombo = Comment::all();
         $quilombo = Publiction::all(); 
 
-        return view('index',['publictions'=>$quilombo], ['comments'=>$quilombo]);
+        return view('index',['publictions'=>$quilombo, 'comments'=>$quilombo]);
     }
     public function contact(){
         return view('users.contact');
@@ -44,19 +44,32 @@ class QuilombController extends Controller
         $publiction->title = $request->title;
         $publiction->content = $request->content;
 
+        //Image Upload
+        if($request->hasFile('image') && $request->file('image')->isValid()) {
+
+            $requestImage = $request->image;
+            
+            $extenseion = $requestImage->extension();
+
+            //$imageName = md5($requestImage->image->getClientOriginalName() . );
+
+        }
+
         $publiction->save();
 
         return redirect('/')->with('msg', 'Publicação realizada com sucesso!');
 
-        
-        $quilombo = new comment;
+    }
+    public function stor(Request $request){
+        //Comments
+
+        $comment = new comment;
 
         $comment->email = $request->email;
         $comment->content2 = $request->content2;
 
-        $comment-save();
+        $comment->save();
 
         return redirect('/');
-
     }
 }

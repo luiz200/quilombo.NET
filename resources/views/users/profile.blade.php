@@ -34,7 +34,7 @@
             <tfoot>
                 <tr scope="col">
                     <td>
-                        <a href="#">Comentar</a>
+                        <a href="/users/comment">Comentar</a>
                     </td>
                 </tr>
             </tfoot>

@@ -12,8 +12,8 @@
         <input class="form-control" type="email" id="email" name="email">
     </div>
     <div class="mb-3">
-        <label class="form-label" for="content">Comentário</label>
-        <input class="form-control" type="text" id="content" name="content">
+        <label class="form-label" for="content2">Comentário</label>
+        <input class="form-control" type="text" id="content2" name="content2">
     </div>
     <button class="btn btn-primary">OK</button>
     <br>
