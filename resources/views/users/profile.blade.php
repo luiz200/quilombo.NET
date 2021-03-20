@@ -3,17 +3,6 @@
 @section('title', 'Perfil')
 
 @section('content')
-<style>
-body {
-    background-image: url(/img/fundo.png); 
-    background-position: center;
-    background-attachment: fixed;
-    background-size:1500px;
-    background-size: 1100px;
-    background-repeat: no-repeat;
-  
-}
-</style>
 <body>
 <div class="container">
     <div class="table-responsive">

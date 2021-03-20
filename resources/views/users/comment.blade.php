@@ -1,6 +1,7 @@
 @extends('layouts.main')
 
 @section('content')
+<body>
 <div id="d"></div>
 <form class="border container" action="/users" method="POST">
     <br>
@@ -18,4 +19,5 @@
     <br>
     <br>
 </form>
+</body>
 @endsection
