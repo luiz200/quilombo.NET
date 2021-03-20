@@ -33,11 +33,11 @@
             </tbody>
             <tfoot>
                 <tr scope="col">
-                        <td>
-                            <a href="#">Comentar</a>
-                        </td>
-                    </tr>
-                </tfoot>
+                    <td>
+                        <a href="/users/comment">Comentar</a>
+                    </td>
+                </tr>
+            </tfoot>
         </table>
     @endforeach
     </div>
