@@ -3,6 +3,18 @@
 @section('title', 'Publicações')
 
 @section('content')
+<style>
+body {
+  background-image: url(/img/fundo.png); 
+    background-position: center;
+    background-attachment: fixed;
+    background-size:1500px;
+    background-size: 1100px;
+    background-repeat: no-repeat;
+  
+}
+</style>
+<body>
 <div id="d"></div>
 <form class=" container" action="/users" method="POST">
 <br>
@@ -15,7 +27,7 @@
    </div>
    <div class="form-group">
      <label class="form-label" for="title">Titúlo</label>
-     <input class="form-control" type="text" id="title" name="title"> 
+     <input class="form-control" type="text" id="title" name="title" style="background-color:transparent"> 
    </div>
    <div class="form-group">
      <label class="form-label" for="content">Conteúdo</label>
@@ -28,4 +40,5 @@
  </form>
 
  
+</body>
 @endsection 
