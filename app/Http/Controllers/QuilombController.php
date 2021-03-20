@@ -5,16 +5,14 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 
 use App\Models\Publiction;
-use App\Models\Comment;
 
 class QuilombController extends Controller
 {
     public function index(){
         
-        $quilombo = Comment::all();
-        $quilombo = Publiction::all(); 
+        $quilombo = Publiction::all();
 
-        return view('index',['publictions'=>$quilombo, 'comments'=>$quilombo]);
+        return view('index',['publictions'=>$quilombo]);
     }
     public function contact(){
         return view('users.contact');
@@ -51,7 +49,11 @@ class QuilombController extends Controller
             
             $extenseion = $requestImage->extension();
 
-            //$imageName = md5($requestImage->image->getClientOriginalName() . );
+            $imageName = md5($requestImage->getClientOriginalName() . strtotime("now")) . "." . $extenseion;
+
+            $requestImage->move(public_path('img/publictions'), $imageName);
+
+            $publiction->image = $imageName;
 
         }
 
@@ -59,17 +61,5 @@ class QuilombController extends Controller
 
         return redirect('/')->with('msg', 'Publicação realizada com sucesso!');
 
-    }
-    public function stor(Request $request){
-        //Comments
-
-        $comment = new comment;
-
-        $comment->email = $request->email;
-        $comment->content2 = $request->content2;
-
-        $comment->save();
-
-        return redirect('/');
-    }
+    } 
 }

@@ -10,11 +10,11 @@
     @foreach($publictions as $quilombo)
     <br>
     <br>
-        <table class="table table-striped table-sm">
+        <table class="table table-sm">
             <thead>
                 <tr>
                     <th scope="col">
-                        Quilombo Cachangar
+                        <img src="/img/publictions/{{ $quilombo->image }}" alt="{{ $quilombo->title }}">
                     </th>
                 </tr>
             </thead>
@@ -38,18 +38,6 @@
                         <a href="/users/comment">Comentar</a>
                     </td>
                 </tr>
-                @foreach($comments as $comment)
-                <tr scope="col">
-                    <td>
-                        <p>{{ $quilombo->email }}</p>
-                    </td>
-                </tr>
-                <tr scope="col">
-                    <td>
-                        <p>{{ $quilombo->content2 }}</p>
-                    </td>
-                </tr>
-                @endforeach
             </tfoot>
         </table>
     @endforeach

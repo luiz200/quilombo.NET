@@ -23,4 +23,3 @@ Route::get('/users/newuser', [QuilombController::class, 'newuser']);
 Route::get('/users/publiction', [QuilombController::class, 'publiction']);
 Route::get('/users/comment', [QuilombController::class, 'comment']);
 Route::post('/users', [QuilombController::class, 'store']);
-Route::post('/users', [QuilombController::class, 'stor']);
