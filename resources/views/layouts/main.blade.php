@@ -49,8 +49,14 @@
         <nav id="sidebarMenu" class="col-md-5 col-lg-2 d-md-block bg-light bg-gradient sidebar collapse row" style>
             <div class="position-sticky pt-4">
                 <ul class="nav flex-column">
+                <li class="nav-item">
+                        <a class="nav-link" href="/users/newuser">Cadastrar Quilombo</a>
+                    </li>
                     <li class="nav-item">
                         <a class="nav-link active" aria-current="page" href="/">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/users/publiction">Publicar</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="/users/profile">Perfil</a>
@@ -58,12 +64,8 @@
                     <li class="nav-item">
                         <a class="nav-link" href="/users/contact">Contatos</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/users/newuser">Cadastrar Quilombo</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/users/publiction">Publicar</a>
-                    </li>
+                    
+                    
                 </ul>    
             </div>
         </nav>
