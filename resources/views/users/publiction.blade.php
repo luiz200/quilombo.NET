@@ -5,6 +5,7 @@
 @section('content')
 
 <div id="event-create-container" class="col-md-offset-md-3">
+</div>
 <form class="container" action="/users" method="POST" enctype="multipart/form-data">
 <br>
 <legend>Publicações</legend>
@@ -27,6 +28,5 @@
     <br>
     <br>
  </form>
-</div>
 
 @endsection 

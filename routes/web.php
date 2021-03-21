@@ -17,9 +17,7 @@ use App\Http\Controllers\QuilombController;
 
 Route::get('/', [QuilombController::class, 'index']);
 Route::get('/users/contact', [QuilombController::class, 'contact']);
-Route::get('/users/profile', [QuilombController::class, 'profile']);
-Route::get('/users/login', [QuilombController::class, 'login']);
-Route::get('/users/newuser', [QuilombController::class, 'newuser']);
 Route::get('/users/publiction', [QuilombController::class, 'publiction']);
+Route::get('/users/{id}', [QuilombController::class, 'show']);
 Route::get('/users/comment', [QuilombController::class, 'comment']);
 Route::post('/users', [QuilombController::class, 'store']);

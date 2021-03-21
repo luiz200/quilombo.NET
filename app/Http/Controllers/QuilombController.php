@@ -10,9 +10,9 @@ class QuilombController extends Controller
 {
     public function index(){
         
-        $quilombo = Publiction::all();
+        $publiction = Publiction::all();
 
-        return view('index',['publictions'=>$quilombo]);
+        return view('index',['publictions'=>$publiction]);
     }
     public function contact(){
         return view('users.contact');
@@ -48,6 +48,13 @@ class QuilombController extends Controller
         $publiction->save();
 
         return redirect('/')->with('msg', 'Publicação realizada com sucesso!');
+
+    }
+    public function show($id){
+
+        $publiction = Publiction::findOrFail($id);
+
+        return view("users.show", ["publictions" => $publiction]);
 
     } 
 }

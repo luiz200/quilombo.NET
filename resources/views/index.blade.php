@@ -4,44 +4,17 @@
 
 @section('content')
 
-<body> 
-    <div class="container">
-    <div class="table-responsive">
-    @foreach($publictions as $quilombo)
-    <br>
-    <br>
-        <table class="table table-sm">
-            <thead>
-                <tr>
-                    <th scope="col">
-                        <img src="/img/publictions/{{ $quilombo->image }}" alt="{{ $quilombo->title }}">
-                    </th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td scope="col">
-                        <h4>
-                        {{ $quilombo->title }}
-                        </h4>
-                    </td>
-                </tr>
-                <tr>
-                    <td scope="col">
-                        <p>{{ $quilombo->content }}</p>
-                    </td>
-                </tr>
-            </tbody>
-            <tfoot>
-                <tr scope="col">
-                    <td>
-                        <a href="/users/comment">Comentar</a>
-                    </td>
-                </tr>
-            </tfoot>
-        </table>
-    @endforeach
+<br>
+<div id="cards-container" class="row">
+    @foreach($publictions as $publiction)
+    <div class="card col-md-3">
+        <h4>Nome do quilombo</h4>
+        <img src="/img/publictions/{{ $publiction->image }}" alt="{{ $publiction->title }}">
+        <div class="card-body">
+            <h4>{{ $publiction->title }}</h4>
+            <a href="/users/{{ $publiction->id }}" class="btn btn-primary">Ver publicação</a>
+        </div>
     </div>
+    @endforeach
 </div>
-</body>
 @endsection
