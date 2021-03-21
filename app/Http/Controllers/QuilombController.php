@@ -9,10 +9,20 @@ use App\Models\Publiction;
 class QuilombController extends Controller
 {
     public function index(){
-        
-        $publiction = Publiction::all();
 
-        return view('index',['publictions'=>$publiction]);
+        $search = request('search');
+
+        if($search){
+
+            $publiction = Publiction::where([
+                ['title', 'like', '%'.$search.'%']
+            ])->get();
+
+        }else{
+            $publiction = Publiction::all();
+        }
+
+        return view('index',['publictions'=>$publiction, 'search'=>$search]);
     }
     public function contact(){
         return view('users.contact');
