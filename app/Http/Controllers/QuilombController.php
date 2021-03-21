@@ -17,18 +17,6 @@ class QuilombController extends Controller
     public function contact(){
         return view('users.contact');
     }
-    public function profile(){
-
-        $quilombo = Publiction::all();
-
-        return view('users.profile',['publictions'=>$quilombo]);
-    }
-    public function login(){
-        return view('users.login');
-    }
-    public function newuser(){
-        return view('users.newuser');
-    }
     public function comment(){
         return view('users.comment');
     }

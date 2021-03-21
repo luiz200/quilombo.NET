@@ -4,9 +4,8 @@
 
 @section('content')
 
-<body>
-<div id="d"></div>
-<form class=" container" action="/users" method="POST">
+<div id="event-create-container" class="col-md-offset-md-3">
+<form class="container" action="/users" method="POST" enctype="multipart/form-data">
 <br>
 <legend>Publicações</legend>
    @csrf
@@ -28,7 +27,6 @@
     <br>
     <br>
  </form>
+</div>
 
- 
-</body>
 @endsection 
