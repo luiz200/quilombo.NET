@@ -13,20 +13,21 @@
    <br>
    <div class="form-group">
      <label class="form-label" for="image">Imagem para publicar</label>
-     <input class="form-control-file" type="file" id="image" name="image" style="background-color:transparent"> 
+     <input class="form-control-file" type="file" id="image" name="image" > 
    </div>
    <div class="form-group">
      <label class="form-label" for="title">Titúlo</label>
-     <input class="form-control" type="text" id="title" name="title" style="background-color:transparent"> 
+     <input class="form-control" type="text" id="title" name="title" > 
+   </div>
+   <div class="form-group">
+     <label class="form-label" for="date">Data da publicação</label>
+     <input class="form-control" type="date" id="date" name="date" > 
    </div>
    <div class="form-group">
      <label class="form-label" for="content">Conteúdo</label>
-     <textarea class="form-control" name="content" id="content" cols="30" rows="10" style="background-color:transparent" ></textarea>
+     <textarea class="form-control" name="content" id="content"></textarea>
    </div> 
-   <br> 
     <button class="btn btn-primary">OK</button>
-    <br>
-    <br>
  </form>
 
 @endsection 

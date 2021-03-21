@@ -16,5 +16,8 @@
         </div>
     </div>
     @endforeach
+    @if(count($publictions) == 0)
+        <p class="container-fluid">Ainda não há publicações, <a href="/users/publiction">seja o primeiro a publicar.</a></p>
+    @endif
 </div>
 @endsection
