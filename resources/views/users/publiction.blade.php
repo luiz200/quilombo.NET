@@ -18,11 +18,7 @@
    <div class="form-group">
      <label class="form-label" for="title">Titúlo</label>
      <input class="form-control" type="text" id="title" name="title" > 
-   </div>
-   <div class="form-group">
-     <label class="form-label" for="date">Data da publicação</label>
-     <input class="form-control" type="date" id="date" name="date" > 
-   </div>
+   </div> 
    <div class="form-group">
      <label class="form-label" for="content">Conteúdo</label>
      <textarea class="form-control" name="content" id="content"></textarea>

@@ -14,7 +14,6 @@
         @foreach($publictions as $publiction)
         <div class="card col-md-3">
             <img src="/img/publictions/{{ $publiction->image }}" alt="{{ $publiction->title }}">
-            <h4>Nome do quilombo</h5>
             <div class="card-body">
                 <h4>{{ $publiction->title }}</h4>
                 <a href="/users/{{ $publiction->id }}" class="btn btn-primary">Ver publicação</a>

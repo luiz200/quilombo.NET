@@ -70,9 +70,11 @@
                         <li class="nav-item">
                             <a class="nav-link active" aria-current="page" href="/">Home</a>
                         </li>
+                        @guest
                         <li class="nav-item">
                             <a class="nav-link" href="/register">Cadastrar Quilombo</a>
                         </li>
+                        @endguest
                         @auth
                         <li class="nav-item">
                             <a class="nav-link" href="/users/publiction">Publicar</a>

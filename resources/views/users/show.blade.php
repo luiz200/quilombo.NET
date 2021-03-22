@@ -11,8 +11,7 @@
         </div>
         <div id="info-container" class="col-md-6">
             <h1>{{ $publictions->title }}</h1>
-            <p class="quilombo-city"><ion-icon name="location-outline"></ion-icon>Cachangar</p>
-            <p class="comunidade-owner"><ion-icon name="star-outline"></ion-icon>Nova descoberta</p>
+            <p class="comunidade-owner"><ion-icon name="star-outline"></ion-icon>{{ $publictionOwner['name'] }}</p>
         </div>
         <div class="col-md-12" id="description-container">
             <p class="public-description"> {{ $publictions->content }} </p>

@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 
 use App\Models\Publiction;
+use App\Models\User;
 
 class QuilombController extends Controller
 {
@@ -56,7 +57,7 @@ class QuilombController extends Controller
         }
 
         $user = auth()->user();
-        $publiction->user_id = $user->$id;
+        $publiction->user_id = $user->id;
 
         $publiction->save();
 
@@ -67,7 +68,26 @@ class QuilombController extends Controller
 
         $publiction = Publiction::findOrFail($id);
 
-        return view("users.show", ["publictions" => $publiction]);
+        $publictionOwner = User::where('id', $publiction->user_id)->first()->toArray();
+
+        return view('users.show', ['publictions' => $publiction, 'publictionOwner' => $publictionOwner]);
+
+    }
+    public function dashboard(){
+
+        $user = auth()->user();
+
+        $publiction = $user->publiction;
+
+        return view('users.dashboard', ['publictions' => $publiction]);
 
     } 
+
+    public function destroy($id){
+
+        Publiction::findOrFail($id)->delete();
+
+        return redirect('/dashboard')->with('msg', 'Publicação excluída com sucesso!'); 
+
+    }
 }

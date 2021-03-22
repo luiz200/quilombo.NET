@@ -16,11 +16,11 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\QuilombController;
 
 Route::get('/', [QuilombController::class, 'index']);
-Route::get('/users/contact', [QuilombController::class, 'contact']);
 Route::get('/users/publiction', [QuilombController::class, 'publiction'])->middleware('auth');
 Route::get('/users/{id}', [QuilombController::class, 'show']);
-Route::get('/users/comment', [QuilombController::class, 'comment'])->middleware('auth');
 Route::post('/users', [QuilombController::class, 'store']);
-Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
-    return view('dashboard');
-})->name('dashboard');
+Route::delete('/users/{id}', [QuilombController::class, 'destroy']);
+
+Route::get('/dashboard', [QuilombController::class, 'dashboard'])->middleware('auth');
+
+Route::get('/users/contact', [QuilombController::class, 'contact']);
