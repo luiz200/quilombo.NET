@@ -55,6 +55,9 @@ class QuilombController extends Controller
 
         }
 
+        $user = auth()->user();
+        $publiction->user_id = $user->$id;
+
         $publiction->save();
 
         return redirect('/')->with('msg', 'Publicação realizada com sucesso!');

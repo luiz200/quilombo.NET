@@ -42,9 +42,24 @@
             <input id="search" name="search" class="form-control form-control-dark w-100" type="text" placeholder="Search" aria-label="Search">
         </form>
         <ul class="navbar-nav px-5">
+            @guest
             <li class="nav-item text-nowrap">
-                <a class="nav-link" href="#">Entrar</a>
+                <a class="nav-link" href="/login">Entrar</a>
             </li>
+            @endguest
+            @auth
+            <li class="nav-item text-nowrap">
+                <form action="/logout" method="POST">
+                    @csrf
+                    <a class="nav-link" href="/logout" 
+                        onclick="event.preventDefault();
+                        this.closest('form').submit();"
+                    >
+                        Sair
+                    </a>
+                </form>
+            </li>
+            @endauth
         </ul>
     </header>
     <div class="container-fluid">
@@ -56,17 +71,21 @@
                             <a class="nav-link active" aria-current="page" href="/">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Cadastrar Quilombo</a>
+                            <a class="nav-link" href="/register">Cadastrar Quilombo</a>
                         </li>
+                        @auth
                         <li class="nav-item">
                             <a class="nav-link" href="/users/publiction">Publicar</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="/users/profile">Perfil</a>
+                            <a class="nav-link" href="/dashboard">Perfil</a>
                         </li>
+                        @endauth
+                        @guest
                         <li class="nav-item">
                             <a class="nav-link" href="/users/contact">Contatos</a>
                         </li>
+                        @endguest
                         
                         
                     </ul>    
