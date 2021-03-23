@@ -90,4 +90,35 @@ class QuilombController extends Controller
         return redirect('/dashboard')->with('msg', 'Publicação excluída com sucesso!'); 
 
     }
+
+    public function edit($id){
+
+        $publiction = Publiction::findOrFail($id);
+
+        return view('users.edit', ['publictions' => $publiction]);
+
+    }
+
+    public function update(Request $request){
+
+        Publiction::findOrFail($request->id)->update($request->all());
+
+         //Image Upload
+         if($request->hasFile('image') && $request->file('image')->isValid()) {
+
+            $requestImage = $request->image;
+            
+            $extenseion = $requestImage->extension();
+
+            $imageName = md5($requestImage->getClientOriginalName() . strtotime("now")) . "." . $extenseion;
+
+            $requestImage->move(public_path('img/publictions'), $imageName);
+
+            $data['image'] = $imageName;
+
+        }
+
+        return redirect('/dashboard')->with('msg', 'Publicação editada com sucesso!'); 
+
+    }
 }
