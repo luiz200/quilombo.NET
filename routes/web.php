@@ -22,7 +22,5 @@ Route::post('/users', [QuilombController::class, 'store']);
 Route::delete('/users/{id}', [QuilombController::class, 'destroy'])->middleware('auth');
 Route::get('/users/edit/{id}', [QuilombController::class, 'edit'])->middleware('auth');
 Route::put('/users/update/{id}', [QuilombController::class, 'update'])->middleware('auth');
-
 Route::get('/dashboard', [QuilombController::class, 'dashboard'])->middleware('auth');
-
 Route::get('/users/contact', [QuilombController::class, 'contact']);

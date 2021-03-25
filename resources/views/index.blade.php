@@ -4,7 +4,7 @@
 
 @section('content')
 
-<div id="publiction-container" class="col-md-12">
+<div id="events-container" class="col-md-12">
     @if($search)
     <h2>Buscando por: {{ $search }}</h2>
     @else
@@ -16,7 +16,7 @@
             <img src="/img/publictions/{{ $publiction->image }}" alt="{{ $publiction->title }}">
             <div class="card-body">
                 <h4>{{ $publiction->title }}</h4>
-                <a href="/users/{{ $publiction->id }}" class="btn btn-primary">Ver publicação</a>
+                <a href="/users/{{ $publiction->id }}" class="btn btn-primary" id="btn-primary">Ver publicação</a>
             </div>
         </div>
         @endforeach

@@ -7,41 +7,38 @@ body {
   min-height: 100vh;
   padding-bottom: 100px;
   position: relative;
-    background-image: url(/img/fundo.png); 
-    background-position: center;
-    background-attachment: fixed;
-    background-size:1500px;
-    background-size: 1100px;
-    background-repeat: no-repeat;
 }
 
 header {
   background-color: #FFF;
   border-bottom: 1px solid #CCC;
 }
-
-.row {
-  margin: 0;
+ion-icon {
+  font-size: 20px;
+  margin-right: 2px;
 }
-
-.container-fluid {
-  padding: 0;
+#d{
+  font-size: 27px;
 }
-
-.btn-primary {
+#dd{
+  color: #ee8d16;
+}
+#ddd{
+  font-size: 27px;
+}
+#btn-primary {
   background-color: #F2A340;
   border: 2px solid #C28008;
 }
 
-.btn-primary:hover {
+#btn-primary:hover {
   background-color: #C28008;
   border-color: #C28008;
 }
-
 .msg {
-  background-color: #D4EDDA;
-  color: #155724;
-  border: 1px solid #C3E6CB;
+  background-color: #11bcf0;
+  color: #0566f8;
+  border: 1px solid #09a1d8;
   width: 100%;
   margin-bottom: 0;
   text-align: center;
@@ -56,6 +53,54 @@ header {
   padding: 10px;
   width: 275px;
 }
+/* Events list */
+#events-container {
+  padding: 50px;
+}
+
+#events-container h2 {
+  margin-bottom: 10px;
+}
+
+#events-container .subtitle {
+  color: #757575;
+  margin-bottom: 30px;
+}
+
+#cards-container {
+  display: flex;
+}
+
+#events-container .card {
+  flex: 1 1 24%;
+  max-width: 25%;
+  border-radius: 10px;
+  padding: 0;
+  margin: .5%;
+}
+#events-container img {
+  max-height: 150px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+.card .card-date {
+  font-size: 12px;
+  color: #CCC;
+}
+
+.card .card-title {
+  color: #212121;
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+
+.card-participants {
+  font-size: 14px;
+  color: #757575;
+}
+
+
 /* Event create page */
 #event-create-container {
   padding: 30px
@@ -98,12 +143,6 @@ header {
   font-weight: bold;
 }
 
-#info-container ion-icon {
-  font-size: 20px;
-  color: #F2A340;
-  margin-right: 5px;
-}
-
 #info-container #event-submit {
   margin: 20px 0;
 }
@@ -140,26 +179,6 @@ header {
 .img-preview {
   width: 100px;
   margin-top: 20px;
-}
-
-/* footer */
-footer {
-  text-align: center;
-  background-color: #353E48;
-  color: #FFF;
-  padding: 30px;
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-}
-
-footer p {
-  margin-bottom: 0;
-}
-.feather {
-  width: 26px;
-  height: 26px;
-  vertical-align: text-bottom;
 }
 
 /*
@@ -211,6 +230,6 @@ footer p {
 }
 
 .sidebar-heading {
-  font-size: .75rem;
+  font-size: 20px;
   text-transform: uppercase;
 }

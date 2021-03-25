@@ -17,7 +17,7 @@ class QuilombController extends Controller
 
             $publiction = Publiction::where([
                 ['title', 'like', '%'.$search.'%']
-            ])->get();
+            ])->get()->count();
 
         }else{
             $publiction = Publiction::all();
@@ -77,9 +77,9 @@ class QuilombController extends Controller
 
         $user = auth()->user();
 
-        $publiction = $user->publiction;
+        $publictions = $user->publictions;
 
-        return view('users.dashboard', ['publictions' => $publiction]);
+        return view('users.dashboard', ['publictions' => $publictions]);
 
     } 
 
@@ -101,10 +101,10 @@ class QuilombController extends Controller
 
     public function update(Request $request){
 
-        Publiction::findOrFail($request->id)->update($request->all());
+        $data = $request->all();
 
          //Image Upload
-         if($request->hasFile('image') && $request->file('image')->isValid()) {
+        if($request->hasFile('image') && $request->file('image')->isValid()) {
 
             $requestImage = $request->image;
             
@@ -117,6 +117,8 @@ class QuilombController extends Controller
             $data['image'] = $imageName;
 
         }
+
+        Publiction::findOrFail($request->id)->update($data);
 
         return redirect('/dashboard')->with('msg', 'Publicação editada com sucesso!'); 
 

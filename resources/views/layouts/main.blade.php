@@ -32,9 +32,9 @@
     </style>
     
 </head>
-<body>
-    <header class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0 shadow" id="nav">
-        <a class="navbar-brand col-md-5 col-lg-2 me-0 px-5" href="/">Quilombo</a>
+<body >
+    <header class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap" id="nav">
+        <a class="navbar-brand col-md-5 col-lg-2 me-0 px-5" id="dd" href="/">Quilombo</a>
         <button class="navbar-toggler position-absolute d-md-none" type="button" data-bs-toggle="collapse" data-bs-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="true" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -44,7 +44,7 @@
         <ul class="navbar-nav px-5">
             @guest
             <li class="nav-item text-nowrap">
-                <a class="nav-link" href="/login">Entrar</a>
+                <a class="nav-link" href="/login" id="ddd"><ion-icon name="enter-outline"></ion-icon></a>
             </li>
             @endguest
             @auth
@@ -55,7 +55,7 @@
                         onclick="event.preventDefault();
                         this.closest('form').submit();"
                     >
-                        Sair
+                    <ion-icon name="exit-outline" id="d"></ion-icon>
                     </a>
                 </form>
             </li>
@@ -64,32 +64,30 @@
     </header>
     <div class="container-fluid">
         <div class="row">
-            <nav id="sidebarMenu" class="col-md-5 col-lg-2 d-md-block bg-light bg-gradient sidebar collapse row" style>
+            <nav id="sidebarMenu" class="col-md-5 col-lg-2 d-md-block bg-light bg-gradient sidebar collapse row">
                 <div class="position-sticky pt-4">
                     <ul class="nav flex-column">
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="/">Home</a>
+                            <a class="nav-link active" aria-current="page" href="/"><ion-icon name="home-outline"></ion-icon> Home</a>
                         </li>
                         @guest
                         <li class="nav-item">
-                            <a class="nav-link" href="/register">Cadastrar Quilombo</a>
+                            <a class="nav-link" href="/register"><ion-icon name="add-outline"></ion-icon> Cadastrar Quilombo</a>
                         </li>
                         @endguest
                         @auth
                         <li class="nav-item">
-                            <a class="nav-link" href="/users/publiction">Publicar</a>
+                            <a class="nav-link" href="/users/publiction"><ion-icon name="add-circle-outline"></ion-icon> Publicar</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="/dashboard">Perfil</a>
+                            <a class="nav-link" href="/dashboard"><ion-icon name="person-circle-outline"></ion-icon> Perfil</a>
                         </li>
                         @endauth
                         @guest
                         <li class="nav-item">
-                            <a class="nav-link" href="/users/contact">Contatos</a>
+                            <a class="nav-link" href="/users/contact"><ion-icon name="call-outline"></ion-icon> Contatos</a>
                         </li>
-                        @endguest
-                        
-                        
+                        @endguest    
                     </ul>    
                 </div>
             </nav>
