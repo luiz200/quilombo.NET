@@ -7,16 +7,16 @@
 <div id="events-container" class="col-md-12">
     @if($search)
     <h2>Buscando por: {{ $search }}</h2>
-    @else
-    <h2>Publicações</h2>
     @endif
     <div id="cards-container" class="row">
         @foreach($publictions as $publiction)
-        <div class="card col-md-3">
-            <img src="/img/publictions/{{ $publiction->image }}" alt="{{ $publiction->title }}">
-            <div class="card-body">
-                <h4>{{ $publiction->title }}</h4>
-                <a href="/users/{{ $publiction->id }}" class="btn btn-primary" id="btn-primary">Ver publicação</a>
+        <div>
+            <div class="border border-warning  col-md-5">
+                <img src="/img/publictions/{{ $publiction->image }}" alt="{{ $publiction->title }}">
+                <div class="card-body">
+                    <h4>{{ $publiction->title }}</h4>
+                    <a href="/users/{{ $publiction->id }}" class="btn btn-warning">Ver publicação</a>
+                </div>
             </div>
         </div>
         @endforeach

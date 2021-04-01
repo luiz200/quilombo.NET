@@ -11,7 +11,6 @@
 
     <title>@yield('title')</title>
 </head>
-<body >
     <header>
       <nav>
         <input type="checkbox" id="check">
@@ -62,17 +61,19 @@
         </ul>
       </nav>
     </header>
-    <section>
+<body id="sec">
+    <section >
         @if(session('msg'))
             <p class="msg">{{ session('msg') }}</p>
         @endif
-        <br>
-        <br>
-        <form action="/" method="get">
-            <input id="search-container" class="form-control form-control border border-warnings" name="search" type="text" placeholder="Search" aria-label="Search">
+        <form id="search-container" action="/" method="get">
+            <input class="form-control container-fluid" name="search" type="text" placeholder="Buscar..." aria-label="Search">
         </form>
         @yield('content')
     </section>
 </body>
+<footer>
+    <p>Quilombo.NET &copy; 2021</p>
+</footer>
 <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
 </html>

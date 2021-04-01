@@ -28,9 +28,6 @@ class QuilombController extends Controller
     public function contact(){
         return view('users.contact');
     }
-    public function comment(){
-        return view('users.comment');
-    }
     public function publiction(){
         return view('users.publiction');
     }
@@ -67,6 +64,7 @@ class QuilombController extends Controller
     public function show($id){
 
         $publiction = Publiction::findOrFail($id);
+
 
         $publictionOwner = User::where('id', $publiction->user_id)->first()->toArray();
 
